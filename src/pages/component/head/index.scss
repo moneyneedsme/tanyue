@@ -1,0 +1,34 @@
+.headContainer {
+  position: relative;
+  overflow: hidden;
+  height: 787px;
+  .imgLogo {
+    position: absolute;
+    left: 320px;
+    top: 32px;
+    z-index: 99;
+    cursor: pointer;
+  }
+  .downApp {
+    font-size: 16px;
+    color: #fdfdfd;
+    border: 1px solid #fafafa;
+    width: 120px;
+    height: 40px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 30px;
+    position: absolute;
+    right: 360px;
+    top: 28px;
+    z-index: 99;
+    background: transparent;
+    cursor: pointer;
+  }
+  .swiper-slide {
+    & > img {
+      width: 100%;
+      height: 787px;
+    }
+  }
+}

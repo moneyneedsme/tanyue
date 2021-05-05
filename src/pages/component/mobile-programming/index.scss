@@ -1,0 +1,77 @@
+.mobileProgramming {
+  overflow: hidden;
+  padding-bottom: 116px;
+  .downBox {
+    margin-top: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    & > img {
+      width: 898px;
+      height: 633px;
+    }
+    .downInfo {
+      text-align: center;
+      margin-top: 44px;
+      & > p {
+        margin-bottom: 28px;
+        color: #0a002a;
+        font-size: 32px;
+      }
+      .downMode {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        & > img:first-of-type {
+          width: 32px;
+          height: 32px;
+        }
+        & > img:last-of-type {
+          width: 10px;
+          height: 14px;
+        }
+        & img {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .classify {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      height: 100%;
+      text-align: center;
+      background: white;
+      padding: 60px 30px;
+      overflow: hidden;
+      margin-right: 22px;
+      cursor: pointer;
+      & > img {
+        width: 168px;
+        height: 168px;
+      }
+      & > h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #0a002a;
+        margin: 24px 0;
+      }
+      & > p {
+        font-size: 18px;
+        color: #8c8c8c;
+        text-align: left;
+      }
+      &:last-of-type {
+        margin-right: 0px;
+      }
+      &:hover {
+        & > img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.footer {
+  background: #323333;
+  .footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 52px 28px;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      .logo {
+        width: 317px;
+        height: 72px;
+      }
+      .aboutUs {
+        margin-left: 46px;
+        margin-right: 54px;
+        & > div {
+          & > span {
+            display: inline-block;
+            width: 94px;
+            height: 34px;
+            line-height: 34px;
+            background: #2b2b2b;
+            border-radius: 17px;
+            font-size: 14px;
+            color: #f6f6f6;
+            text-align: center;
+            margin-right: 24px;
+          }
+          & > i {
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 600;
+            color: #f6f6f6;
+          }
+        }
+        & > div:first-of-type {
+          margin-bottom: 24px;
+        }
+      }
+      .down {
+        text-align: center;
+        & > img {
+          width: 99px;
+          height: 99px;
+        }
+        & > p {
+          font-weight: 600;
+          color: #f6f6f6;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+        &:first-of-type {
+          margin-right: 43px;
+        }
+      }
+    }
+    .tip {
+      margin-top: 16px;
+      text-align: center;
+      & > div {
+        & > span {
+          font-size: 14px;
+          color: #f6f6f6;
+          margin-right: 48px;
+        }
+        & > span:last-of-type {
+          margin-right: 0;
+        }
+      }
+      & > p {
+        font-size: 16px;
+        color: #f6f6f6;
+        margin-top: 16px;
+      }
+    }
+  }
+}

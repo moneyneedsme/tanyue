@@ -1,0 +1,45 @@
+.curriculumform {
+  overflow: hidden;
+  .details {
+    padding-bottom: 240px;
+    position: relative;
+    margin-top: 64px;
+    & > img {
+      width: 646px;
+      height: 399px;
+      border-radius: 14px;
+    }
+    & > div {
+      position: absolute;
+      right: 0px;
+      top: 125px;
+      width: 647px;
+      background: #f1edff;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      padding: 88px 40px;
+      box-sizing: border-box;
+      z-index: -1;
+      & > div {
+        text-align: center;
+        flex: 2;
+        & > img {
+          width: 97px;
+          height: 97px;
+        }
+        & > h3 {
+          margin-top: 35px;
+          font-size: 40px;
+          font-weight: 500;
+          color: #0a002a;
+        }
+        & > p {
+          margin-top: 5px;
+          font-size: 26px;
+          color: #0a002a;
+        }
+      }
+    }
+  }
+}

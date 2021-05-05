@@ -1,0 +1,236 @@
+.curriculumSwiper {
+  .swiperNav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 64px;
+    .system {
+      overflow: hidden;
+      cursor: pointer;
+      flex: 1;
+      &:not(:last-of-type) {
+        margin-right: 13px;
+      }
+      & > div:not(:first-of-type) {
+        height: 86px;
+        line-height: 86px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 20px;
+        border-radius: 12px;
+        margin-top: 12px;
+      }
+      & > div:first-of-type {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: #ffffff;
+        font-size: 32px;
+        text-align: center;
+        & > div {
+          flex: 1;
+          border-radius: 24px 24px 12px 12px;
+          margin-right: 13px;
+        }
+        & > div:last-of-type {
+          margin-right: 0px;
+        }
+      }
+    }
+    .first {
+      background: transparent;
+      & > div:nth-of-type(1) {
+        height: 97px;
+        line-height: 97px;
+      }
+      & > div:nth-of-type(2) {
+        height: 110px;
+        line-height: 110px;
+      }
+      & > div:nth-of-type(3) {
+        height: 123px;
+        line-height: 123px;
+      }
+    }
+    .first {
+      background: transparent;
+      & > div:nth-of-type(1) {
+        height: 97px;
+        line-height: 97px;
+      }
+      & > div:nth-of-type(2) {
+        height: 110px;
+        line-height: 110px;
+      }
+      & > div:nth-of-type(3) {
+        height: 123px;
+        line-height: 123px;
+      }
+    }
+    .second {
+      background: transparent;
+      & > div:nth-of-type(1) {
+        height: 136px;
+        line-height: 136px;
+      }
+      & > div:nth-of-type(2) {
+        height: 149px;
+        line-height: 149px;
+      }
+      & > div:nth-of-type(3) {
+        height: 161px;
+        line-height: 161px;
+      }
+    }
+    .third {
+      background: transparent;
+      & > div:nth-of-type(1) {
+        height: 174px;
+        line-height: 174px;
+      }
+      & > div:nth-of-type(2) {
+        height: 187px;
+        line-height: 187px;
+      }
+      & > div:nth-of-type(3) {
+        height: 200px;
+        line-height: 200px;
+      }
+    }
+  }
+  .bgBlue div {
+    background: #7447ff;
+  }
+  .bgYellow div {
+    background: #fbc103;
+  }
+  .bgGreen div {
+    background: #01c4c1;
+  }
+  .swiper-slide-active {
+    padding-bottom: 116px;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+.swiperBox {
+  margin-top: 20px;
+  position: relative;
+  box-shadow: 0px 12px 30px 0px rgba(90, 158, 255, 0.17);
+  border-radius: 12px;
+  padding: 52px;
+  & > h2 {
+    color: #0a002a;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .flexRow {
+    margin-top: 48px;
+    display: flex;
+    & > video {
+      width: 452px;
+      height: 300px;
+      border-radius: 12px;
+      margin-right: 50px;
+    }
+    .introduce {
+      flex: 1;
+      overflow: hidden;
+      margin-top: 35px;
+      & > h3 {
+        color: #0a002a;
+        font-size: 30px;
+        font-weight: 500;
+      }
+      & > p {
+        color: #8c8c8c;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 19px;
+      }
+    }
+    .category {
+      margin-right: 20px;
+      display: flex;
+      margin-top: 13px;
+      &:first-of-type {
+        margin-top: 0px;
+      }
+      & > div {
+        margin-right: 13px;
+        width: 184px;
+        height: 86px;
+        line-height: 86px;
+        color: #ffffff;
+        font-size: 20px;
+        border-radius: 12px 0px 0px 12px;
+        text-align: center;
+      }
+      & > p {
+        width: 292px;
+        height: 86px;
+        line-height: 86px;
+        background: #f3f3f3;
+        border-radius: 0px 12px 12px 0px;
+        padding-left: 45px;
+        color: #0a002a;
+        font-size: 20px;
+        box-sizing: border-box;
+      }
+    }
+    .score {
+      background: #fff9e5;
+      border-radius: 12px;
+      padding: 28px 27px;
+      & > div {
+        display: flex;
+        align-items: center;
+        margin-top: 63px;
+        & > span {
+          margin-right: 39px;
+          color: #0a002a;
+          font-size: 20px;
+          vertical-align: middle;
+        }
+      }
+      & > div:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+  .instructions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    &::before {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 0px;
+      border: 17px solid transparent;
+      border-bottom-color: inherit;
+      position: absolute;
+      top: -34px;
+    }
+  }
+  .arrow_left {
+    &::before {
+      left: 140px;
+    }
+  }
+  .arrow_center {
+    &::before {
+      left: 480px;
+    }
+  }
+  .arrow_right {
+    &::before {
+      left: 815px;
+    }
+  }
+}
