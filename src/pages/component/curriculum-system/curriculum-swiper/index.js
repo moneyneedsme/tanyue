@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/swiper.scss";
@@ -11,6 +11,57 @@ const CurriculumSwiper = () => {
   const _yellow = "#fbc103";
   const _green = "#01c4c1";
   const [nodes, setNodes] = useState([]);
+  const slide1 = {
+    arrow: "left", // 箭头指向
+    color: _blue,
+    title: "《游戏风波》",
+    describe:
+      "勇敢的少女悠悠穿越丛林拯救同伴。本节课我们将探索编程中的条件判断结构，掌握度数、随机数等数学知识，同时通过丰富的动画科普人文历史，通过对作品的解构、分析和调试锻炼逻辑思维和创造力，提升问题解决能力",
+    category: [
+      { name: "编程知识", content: "分支结构，随机" },
+      { name: "知识融合", content: "相对运动，角度，负数" },
+      { name: "学习方法", content: "结构拆解" },
+    ],
+    scoreList: [
+      { name: "计算思维", score: 4.6 },
+      { name: "创造思维", score: 4 },
+      { name: "逻辑思维", score: 5 },
+    ],
+  };
+  const slide2 = {
+    arrow: "center", // 箭头指向
+    color: _yellow,
+    title: "《暗夜丛林历险》",
+    describe:
+      "阿短在暗夜丛林中寻找一只敏捷的秀颌龙，并且要将它驱赶走。本节课将使用随机数积木控制秀颌龙在1秒内移到随机位置，与“移到随机”积木做对比，区分“移到随机”和“在1秒内移到随机坐标”的区别。提升对数学坐标的认知和抽象概念的理解。",
+    category: [
+      { name: "编程知识", content: "在1秒内移到随机坐标" },
+      { name: "知识融合", content: "坐标与随机数相结合" },
+      { name: "学习方法", content: "任务驱动式" },
+    ],
+    scoreList: [
+      { name: "计算思维", score: 4.6 },
+      { name: "创造思维", score: 4 },
+      { name: "逻辑思维", score: 5 },
+    ],
+  };
+  const slide3 = {
+    arrow: "right", // 箭头指向
+    color: _green,
+    title: "《星光丛林怪兽迷踪》",
+    describe:
+      "阿短需要找出藏在星光丛林里面的怪兽。本节课我们将学习列表与角色造型的结合运用，运用带参函数实现列表值的替换。同时通过有趣的科普视频了解《关灯游戏》原理，并将其运用于编程之中。锻炼逻辑思维和创造力，提升问题解决能力。",
+    category: [
+      { name: "编程知识", content: "带参函数、列表替换" },
+      { name: "知识融合", content: "游戏设计与编程结合" },
+      { name: "学习方法", content: "问题驱动式" },
+    ],
+    scoreList: [
+      { name: "计算思维", score: 4.6 },
+      { name: "创造思维", score: 4 },
+      { name: "逻辑思维", score: 5 },
+    ],
+  };
   useEffect(() => {
     setNodes(
       document.querySelectorAll(
@@ -18,9 +69,14 @@ const CurriculumSwiper = () => {
       )
     );
   }, []);
+  const _swiperRef = useRef();
   const setinit = (index) => {
     nodes[index].click();
   };
+
+  function enterSwiper() {
+    console.dir(_swiperRef.current);
+  }
 
   return (
     <div className="curriculumSwiper">
@@ -59,24 +115,27 @@ const CurriculumSwiper = () => {
           <div>NCT图形化编程三级</div>
         </div>
       </div>
-      <Swiper
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 4000 }}
-        pagination={{
-          clickable: true,
-        }}
-      >
-        <SwiperSlide>
-          <SwiperBox color={_blue} arrow="left" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperBox color={_yellow} arrow="center" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperBox color={_green} arrow="right" />
-        </SwiperSlide>
-      </Swiper>
+      <div onMouseEnter={() => enterSwiper()}>
+        <Swiper
+          ref={_swiperRef}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          pagination={{
+            clickable: true,
+          }}
+        >
+          <SwiperSlide>
+            <SwiperBox {...slide1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwiperBox {...slide2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwiperBox {...slide3} />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 };
@@ -86,48 +145,36 @@ const SwiperBox = (props) => {
     "https://f.video.weibocdn.com/E6L5bFhxlx07Mq4Am5PG0104120083dj0E010.mp4?label=mp4_hd&template=960x464.25.0&trans_finger=62b30a3f061b162e421008955c73f536&ori=0&ps=1BVp4ysnknHVZu&Expires=1620225548&ssig=q88ZmOGO4e&KID=unistore,video";
   return (
     <div className="swiperBox">
-      <h2>初阶课程: 《游戏风波》</h2>
+      <h2>初阶课程: {props.title}</h2>
       <div className="flexRow">
         <video src={videoSrc} controls="controls"></video>
         <div className="introduce">
           <h3>课程介绍：</h3>
-          <p>
-            勇敢的少女悠悠穿越丛林拯救同伴。本节课
-            我们将探索编程中的条件判断结构，掌握度
-            数、随机数等数学知识，同时通过丰富的动
-            画科普人文历史，通过对作品的解构、分析
-            和调试锻炼逻辑思维和创造力，提升问题解 决能力。
-          </p>
+          <p>{props.describe}</p>
         </div>
       </div>
       <div className="flexRow">
         <div>
-          <div className="category">
-            <div style={{ background: props.color || "#7447ff" }}>编程知识</div>
-            <p>分支结构，随机</p>
-          </div>
-          <div className="category">
-            <div style={{ background: props.color || "#7447ff" }}>知识融合</div>
-            <p>相对运动，角度，负数</p>
-          </div>
-          <div className="category">
-            <div style={{ background: props.color || "#7447ff" }}>学习方法</div>
-            <p>结构拆解</p>
-          </div>
+          {props.category.map((v) => {
+            return (
+              <div className="category">
+                <div style={{ background: props.color || "#7447ff" }}>
+                  {v.name}
+                </div>
+                <p>{v.content}</p>
+              </div>
+            );
+          })}
         </div>
         <div className="score">
-          <div>
-            <span>计算思维</span>
-            <Score score={4.6} />
-          </div>
-          <div>
-            <span>创造思维</span>
-            <Score score={4} />
-          </div>
-          <div>
-            <span>逻辑思维</span>
-            <Score score={4} />
-          </div>
+          {props.scoreList.map((v) => {
+            return (
+              <div>
+                <span>{v.name}</span>
+                <Score score={v.score} />
+              </div>
+            );
+          })}
         </div>
       </div>
       <div
