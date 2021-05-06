@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useEffect } from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/swiper.scss";
 import "./index.scss";
@@ -63,20 +62,31 @@ const CurriculumSwiper = () => {
     ],
   };
   useEffect(() => {
-    setNodes(
-      document.querySelectorAll(
-        ".curriculumSwiper .swiper-pagination .swiper-pagination-bullet"
-      )
-    );
+    const swiper = new SwiperCore(".curriculumSwiper .swiper-container", {
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    swiper.el.onmouseover = function () {
+      swiper.autoplay.stop();
+    };
+    swiper.el.onmouseleave = function () {
+      swiper.autoplay.start();
+    };
+    setTimeout(() => {
+      setNodes(
+        document.querySelectorAll(
+          ".curriculumSwiper .swiper-pagination .swiper-pagination-bullet"
+        )
+      );
+    }, 1000);
   }, []);
-  const _swiperRef = useRef();
   const setinit = (index) => {
-    nodes[index].click();
+    nodes[index] && nodes[index].click();
   };
-
-  function enterSwiper() {
-    console.dir(_swiperRef.current);
-  }
 
   return (
     <div className="curriculumSwiper">
@@ -115,26 +125,19 @@ const CurriculumSwiper = () => {
           <div>NCT图形化编程三级</div>
         </div>
       </div>
-      <div onMouseEnter={() => enterSwiper()}>
-        <Swiper
-          ref={_swiperRef}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{
-            clickable: true,
-          }}
-        >
-          <SwiperSlide>
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide">
             <SwiperBox {...slide1} />
-          </SwiperSlide>
-          <SwiperSlide>
+          </div>
+          <div className="swiper-slide">
             <SwiperBox {...slide2} />
-          </SwiperSlide>
-          <SwiperSlide>
+          </div>
+          <div className="swiper-slide">
             <SwiperBox {...slide3} />
-          </SwiperSlide>
-        </Swiper>
+          </div>
+        </div>
+        <div className="swiper-pagination"></div>
       </div>
     </div>
   );
@@ -155,9 +158,9 @@ const SwiperBox = (props) => {
       </div>
       <div className="flexRow">
         <div>
-          {props.category.map((v) => {
+          {props.category.map((v, i) => {
             return (
-              <div className="category">
+              <div className="category" key={v.name + i}>
                 <div style={{ background: props.color || "#7447ff" }}>
                   {v.name}
                 </div>
@@ -167,9 +170,9 @@ const SwiperBox = (props) => {
           })}
         </div>
         <div className="score">
-          {props.scoreList.map((v) => {
+          {props.scoreList.map((v, i) => {
             return (
-              <div>
+              <div key={v.name + i}>
                 <span>{v.name}</span>
                 <Score score={v.score} />
               </div>

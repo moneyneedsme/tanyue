@@ -4,7 +4,6 @@ import imgStar from "../../../images/star.png";
 import imgStar1 from "../../../images/star-1.png";
 import imgStar2 from "../../../images/star-2.png";
 const Score = (props) => {
-  console.log(props);
   const getScore = Math.round(props.score);
   const list = [...new Array(getScore)];
   return (
