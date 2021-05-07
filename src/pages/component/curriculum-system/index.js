@@ -7,7 +7,7 @@ const CurriculumSystem = () => {
     <div className="curriculumSystem mainContainer">
       <HeadLine
         title="课程体系"
-        describe="9阶细化分级，能力培养层层提升"
+        describe="9阶细化分级，能力培养层层递进"
       ></HeadLine>
       <div className="curriculum">
         <div className="leftNav">
