@@ -16,7 +16,7 @@ const CurriculumSwiper = () => {
   const slide1 = {
     arrow: "left", // 箭头指向
     color: _blue,
-    title: "《游戏风波》",
+    title: "初阶课程：《游戏风波》",
     video: video1,
     describe:
       "勇敢的少女悠悠穿越丛林拯救同伴。本节课我们将探索编程中的条件判断结构，掌握度数、随机数等数学知识，同时通过丰富的动画科普人文历史，通过对作品的解构、分析和调试锻炼逻辑思维和创造力，提升问题解决能力",
@@ -34,7 +34,7 @@ const CurriculumSwiper = () => {
   const slide2 = {
     arrow: "center", // 箭头指向
     color: _yellow,
-    title: "《暗夜丛林历险》",
+    title: "中阶课程：《暗夜丛林历险》",
     video: video2,
     describe:
       "阿短在暗夜丛林中寻找一只敏捷的秀颌龙，并且要将它驱赶走。本节课将使用随机数积木控制秀颌龙在1秒内移到随机位置，与“移到随机”积木做对比，区分“移到随机”和“在1秒内移到随机坐标”的区别。提升对数学坐标的认知和抽象概念的理解。",
@@ -52,7 +52,7 @@ const CurriculumSwiper = () => {
   const slide3 = {
     arrow: "right", // 箭头指向
     color: _green,
-    title: "《星光丛林怪兽迷踪》",
+    title: "高阶课程：《星光丛林怪兽迷踪》",
     video: video3,
     describe:
       "阿短需要找出藏在星光丛林里面的怪兽。本节课我们将学习列表与角色造型的结合运用，运用带参函数实现列表值的替换。同时通过有趣的科普视频了解《关灯游戏》原理，并将其运用于编程之中。锻炼逻辑思维和创造力，提升问题解决能力。",
@@ -153,7 +153,7 @@ const CurriculumSwiper = () => {
 const SwiperBox = (props) => {
   return (
     <div className="swiperBox">
-      <h2>初阶课程: {props.title}</h2>
+      <h2>{props.title}</h2>
       <div className="flexRow">
         <video controls="controls" height="300px" width="452px">
           <source src={props.video} type="video/mp4" />
