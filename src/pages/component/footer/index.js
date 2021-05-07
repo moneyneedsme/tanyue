@@ -1,6 +1,7 @@
 import "./index.scss";
 import imgLogo2 from "../../../images/logo2.png";
 import imgCode from "../../../images/code.png";
+import imgGzh from "../../../images/gongzhonghao.png";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           <div className="aboutUs">
             <div>
               <span>联系我们</span>
-              <i>(周一至周日 9:00-21:00)</i>
+              <i>客服电话 400-835-3800 (周一至周日 9:00-21:00)</i>
             </div>
             <div>
               <span>公司地址</span>
@@ -23,7 +24,7 @@ const Footer = () => {
             <p>下载APP</p>
           </div>
           <div className="down">
-            <img src={imgCode} alt="" />
+            <img src={imgGzh} alt="" />
             <p>关注公众号</p>
           </div>
         </div>

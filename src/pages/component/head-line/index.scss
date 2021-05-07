@@ -12,6 +12,7 @@
       height: 13px;
       background: url("../../../images/titleLeft.png") no-repeat 100%;
       margin-right: 45px;
+      vertical-align: middle;
     }
     &::after {
       content: "";
@@ -20,6 +21,7 @@
       height: 13px;
       background: url("../../../images/titleRight.png") no-repeat 100%;
       margin-left: 45px;
+      vertical-align: middle;
     }
   }
   & > p {

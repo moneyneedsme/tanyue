@@ -2,7 +2,7 @@
   overflow: hidden;
   padding-bottom: 116px;
   .downBox {
-    margin-top: 30px;
+    margin-top: 50px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     }
     .downInfo {
       text-align: center;
-      margin-top: 44px;
+      margin-top: 25px;
       & > p {
         margin-bottom: 28px;
         color: #0a002a;
@@ -66,11 +66,6 @@
       }
       &:last-of-type {
         margin-right: 0px;
-      }
-      &:hover {
-        & > img {
-          transform: scale(1.2);
-        }
       }
     }
   }

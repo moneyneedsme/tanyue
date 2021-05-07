@@ -4,6 +4,9 @@ import "swiper/swiper.scss";
 import "./index.scss";
 import Score from "../../score/index";
 import "swiper/components/pagination/pagination.scss";
+import video1 from "../../../../video/video1.mp4";
+import video2 from "../../../../video/video1.mp4";
+import video3 from "../../../../video/video1.mp4";
 SwiperCore.use([Autoplay, Pagination]);
 const CurriculumSwiper = () => {
   const _blue = "#7447ff";
@@ -14,6 +17,7 @@ const CurriculumSwiper = () => {
     arrow: "left", // 箭头指向
     color: _blue,
     title: "《游戏风波》",
+    video: video1,
     describe:
       "勇敢的少女悠悠穿越丛林拯救同伴。本节课我们将探索编程中的条件判断结构，掌握度数、随机数等数学知识，同时通过丰富的动画科普人文历史，通过对作品的解构、分析和调试锻炼逻辑思维和创造力，提升问题解决能力",
     category: [
@@ -31,6 +35,7 @@ const CurriculumSwiper = () => {
     arrow: "center", // 箭头指向
     color: _yellow,
     title: "《暗夜丛林历险》",
+    video: video2,
     describe:
       "阿短在暗夜丛林中寻找一只敏捷的秀颌龙，并且要将它驱赶走。本节课将使用随机数积木控制秀颌龙在1秒内移到随机位置，与“移到随机”积木做对比，区分“移到随机”和“在1秒内移到随机坐标”的区别。提升对数学坐标的认知和抽象概念的理解。",
     category: [
@@ -48,6 +53,7 @@ const CurriculumSwiper = () => {
     arrow: "right", // 箭头指向
     color: _green,
     title: "《星光丛林怪兽迷踪》",
+    video: video3,
     describe:
       "阿短需要找出藏在星光丛林里面的怪兽。本节课我们将学习列表与角色造型的结合运用，运用带参函数实现列表值的替换。同时通过有趣的科普视频了解《关灯游戏》原理，并将其运用于编程之中。锻炼逻辑思维和创造力，提升问题解决能力。",
     category: [
@@ -69,6 +75,7 @@ const CurriculumSwiper = () => {
         el: ".swiper-pagination",
         clickable: true,
       },
+      spaceBetween: 20,
     });
     swiper.el.onmouseover = function () {
       swiper.autoplay.stop();
@@ -144,13 +151,13 @@ const CurriculumSwiper = () => {
 };
 
 const SwiperBox = (props) => {
-  const videoSrc =
-    "https://f.video.weibocdn.com/E6L5bFhxlx07Mq4Am5PG0104120083dj0E010.mp4?label=mp4_hd&template=960x464.25.0&trans_finger=62b30a3f061b162e421008955c73f536&ori=0&ps=1BVp4ysnknHVZu&Expires=1620225548&ssig=q88ZmOGO4e&KID=unistore,video";
   return (
     <div className="swiperBox">
       <h2>初阶课程: {props.title}</h2>
       <div className="flexRow">
-        <video src={videoSrc} controls="controls"></video>
+        <video controls="controls" height="300px" width="452px">
+          <source src={props.video} type="video/mp4" />
+        </video>
         <div className="introduce">
           <h3>课程介绍：</h3>
           <p>{props.describe}</p>
