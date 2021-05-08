@@ -5,8 +5,8 @@ import "./index.scss";
 import Score from "../../score/index";
 import "swiper/components/pagination/pagination.scss";
 import video1 from "../../../../video/video1.mp4";
-import video2 from "../../../../video/video1.mp4";
-import video3 from "../../../../video/video1.mp4";
+import video2 from "../../../../video/video2.mp4";
+import video3 from "../../../../video/video3.mp4";
 SwiperCore.use([Autoplay, Pagination]);
 const CurriculumSwiper = () => {
   const _blue = "#7447ff";
@@ -70,12 +70,11 @@ const CurriculumSwiper = () => {
   useEffect(() => {
     const swiper = new SwiperCore(".curriculumSwiper .swiper-container", {
       loop: true,
-      autoplay: { delay: 4000, disableOnInteraction: false },
+      autoplay: { delay: 15000, disableOnInteraction: false },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
-      spaceBetween: 20,
     });
     swiper.el.onmouseover = function () {
       swiper.autoplay.stop();
@@ -155,7 +154,14 @@ const SwiperBox = (props) => {
     <div className="swiperBox">
       <h2>{props.title}</h2>
       <div className="flexRow">
-        <video controls="controls" height="300px" width="452px">
+        <video
+          controls="controls"
+          autoPlay="autoplay"
+          height="300px"
+          width="452px"
+          muted
+          loop
+        >
           <source src={props.video} type="video/mp4" />
         </video>
         <div className="introduce">

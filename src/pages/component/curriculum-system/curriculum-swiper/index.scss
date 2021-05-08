@@ -5,6 +5,7 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-top: 64px;
+    margin-right: 20px;
     .system {
       overflow: hidden;
       cursor: pointer;
@@ -114,17 +115,15 @@
   .swiper-pagination {
     display: none;
   }
-  .swiper-container {
-    overflow: visible;
-  }
 }
 
 .swiperBox {
   margin-top: 20px;
   position: relative;
-  box-shadow: 0px 12px 18px 0px rgba(90, 158, 255, 0.17);
   border-radius: 12px;
+  border: 2px solid #eff0f2;
   padding: 52px;
+  box-sizing: border-box;
   & > h2 {
     color: #0a002a;
     font-size: 40px;
@@ -214,6 +213,8 @@
     height: 12px;
     width: 100%;
     border-radius: 12px 12px 0px 0px;
+    border: 2px solid;
+    box-sizing: border-box;
     &::before {
       content: "";
       display: block;
