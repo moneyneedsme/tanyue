@@ -7,12 +7,14 @@
     display: flex;
     justify-content: space-between;
     & > img {
-      width: 898px;
-      height: 633px;
+      width: 869px;
     }
     .downInfo {
       text-align: center;
       margin-top: 25px;
+      & > img {
+        width: 192px;
+      }
       & > p {
         margin-bottom: 28px;
         color: #0a002a;
@@ -26,7 +28,6 @@
         padding: 0 10px;
         & > img:first-of-type {
           width: 32px;
-          height: 32px;
         }
         & > img:last-of-type {
           width: 10px;
@@ -51,7 +52,6 @@
       cursor: pointer;
       & > img {
         width: 168px;
-        height: 168px;
       }
       & > h3 {
         font-size: 30px;

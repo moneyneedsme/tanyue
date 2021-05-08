@@ -1,6 +1,6 @@
 import HeadLine from "../head-line/index";
 import "./index.scss";
-import imgCurriculumform from "../../../images/curriculum-form.jpg";
+import imgCurriculumform from "../../../images/curriculum-form.png";
 import imgIcon5 from "../../../images/icon-5.png";
 import imgIcon6 from "../../../images/icon-6.png";
 const Curriculumform = () => {

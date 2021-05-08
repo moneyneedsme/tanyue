@@ -1,7 +1,7 @@
 import HeadLine from "../head-line/index";
 import "./index.scss";
-import social1 from "../../../images/social-1.jpg";
-import social2 from "../../../images/social-2.bmp";
+import social1 from "../../../images/social-1.png";
+import social2 from "../../../images/social-2.png";
 const SocialResponsibility = () => {
   return (
     <div className="socialResponsibility mainContainer">

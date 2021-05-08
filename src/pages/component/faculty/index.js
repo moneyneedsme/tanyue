@@ -13,7 +13,9 @@ const Faculty = () => {
       ></HeadLine>
       <div className="info">
         <div>
-          <img src={imgFaculty1} alt="" />
+          <div>
+            <img src={imgFaculty1} alt="" />
+          </div>
           <h2>张晶</h2>
           <h3>北师大教育心理学硕士</h3>
           <p>
@@ -21,7 +23,9 @@ const Faculty = () => {
           </p>
         </div>
         <div>
-          <img src={imgFaculty2} alt="" />
+          <div>
+            <img src={imgFaculty2} alt="" />
+          </div>
           <h2>夏立</h2>
           <h3>香港理工大学博士</h3>
           <p>
@@ -29,13 +33,17 @@ const Faculty = () => {
           </p>
         </div>
         <div>
-          <img src={imgFaculty3} alt="" />
+          <div>
+            <img src={imgFaculty3} alt="" />
+          </div>
           <h2>苏扬扬</h2>
           <h3>香港大学教育学博士</h3>
           <p>10年教育工作经验，累计服务超过50个国家的学生，千人直播课名师</p>
         </div>
         <div>
-          <img src={imgFaculty4} alt="" />
+          <div>
+            <img src={imgFaculty4} alt="" />
+          </div>
           <h2>雷晨</h2>
           <h3>国家心理学咨询师资格</h3>
           <p>
