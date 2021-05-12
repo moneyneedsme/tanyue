@@ -13,8 +13,8 @@ const CurriculumSystem = () => {
         <div className="leftNav">
           <div>适龄参考</div>
           <div>培养目标</div>
-          <div>适龄参考</div>
-          <div>适龄参考</div>
+          <div>等级水平</div>
+          <div>课程案例</div>
           <div>
             <p>立刻领取课程</p>
             <img src={imgCode} alt="" />
