@@ -2,7 +2,7 @@
   overflow: hidden;
   padding-bottom: 116px;
   .downBox {
-    margin-top: 50px;
+    margin-top: 57px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -16,9 +16,10 @@
         width: 192px;
       }
       & > p {
-        margin-bottom: 28px;
-        color: #0a002a;
         font-size: 32px;
+        font-weight: 500;
+        color: #0a002a;
+        margin-bottom: 28px;
       }
       .downMode {
         margin-top: 25px;
@@ -57,12 +58,13 @@
         font-size: 30px;
         font-weight: 500;
         color: #0a002a;
-        margin: 24px 0;
+        margin: 24px 0 16px;
+        font-size: 30px;
       }
       & > p {
         font-size: 18px;
         color: #8c8c8c;
-        text-align: left;
+        text-align: justify;
       }
       &:last-of-type {
         margin-right: 0px;

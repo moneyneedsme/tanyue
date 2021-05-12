@@ -2,7 +2,7 @@
   text-align: center;
   margin-top: 116px;
   & > h2 {
-    font-size: 70px;
+    font-size: 48px;
     font-weight: 600;
     color: #0a002a;
     &::before {
@@ -12,7 +12,7 @@
       height: 13px;
       background: url("../../../images/titleLeft.png") no-repeat 100%;
       background-size: 175px 13px;
-      margin-right: 45px;
+      margin-right: 50px;
       vertical-align: middle;
     }
     &::after {
@@ -22,13 +22,13 @@
       height: 13px;
       background: url("../../../images/titleRight.png") no-repeat 100%;
       background-size: 175px 13px;
-      margin-left: 45px;
+      margin-left: 50px;
       vertical-align: middle;
     }
   }
   & > p {
-    font-size: 26px;
+    margin-top: 10px;
+    font-size: 20px;
     color: #8c8c8c;
-    margin-top: 8px;
   }
 }
