@@ -34,7 +34,7 @@ const CurriculumSwiper = () => {
   const slide2 = {
     arrow: "center", // 箭头指向
     color: _yellow,
-    title: "中阶课程：《暗夜丛林历险》",
+    title: "进阶课程：《暗夜丛林历险》",
     video: video2,
     describe:
       "阿短在暗夜丛林中寻找一只敏捷的秀颌龙，并且要将它驱赶走。本节课将使用随机数积木控制秀颌龙在1秒内移到随机位置，与“移到随机”积木做对比，区分“移到随机”和“在1秒内移到随机坐标”的区别。提升对数学坐标的认知和抽象概念的理解。",
@@ -104,7 +104,7 @@ const CurriculumSwiper = () => {
             <div>L3</div>
           </div>
           <div>初阶课50课时</div>
-          <div>适合 8 岁+</div>
+          <div>适合 7 岁+</div>
           <div>编程入门，编程思维</div>
           <div>NCT图形化编程一级</div>
         </div>
@@ -115,7 +115,7 @@ const CurriculumSwiper = () => {
             <div>L6</div>
           </div>
           <div>进阶课50课时</div>
-          <div>适合 8～9 岁</div>
+          <div>适合 8  岁+</div>
           <div>数理夯实，解决问题</div>
           <div>NCT图形化编程二级</div>
         </div>
@@ -126,7 +126,7 @@ const CurriculumSwiper = () => {
             <div>L9</div>
           </div>
           <div>高阶课50课时</div>
-          <div>适合 10 岁+</div>
+          <div>适合 9 岁+</div>
           <div>高级编程，算法进阶</div>
           <div>NCT图形化编程三级</div>
         </div>

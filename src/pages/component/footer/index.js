@@ -2,7 +2,8 @@ import "./index.scss";
 import imgLogo2 from "../../../images/logo2.png";
 import imgCode from "../../../images/code.png";
 import imgGzh from "../../../images/gongzhonghao.png";
-
+const _userAgreement = 'https://static-platform.codemao.cn/agreements/user_agreement.html'
+const _userPrivacyAgreement = 'https://static-platform.codemao.cn/agreements/user_privacy_agreement.html'
 const Footer = () => {
   return (
     <div className="footer">
@@ -30,8 +31,8 @@ const Footer = () => {
         </div>
         <div className="tip">
           <div>
-            <span>服务协议</span>
-            <span>隐私政策</span>
+            <a href={_userAgreement} target="_blank" rel="noopener noreferrer">服务协议</a>
+            <a href={_userPrivacyAgreement} target="_blank" rel="noopener noreferrer">隐私政策</a>
             <span>粤公网安备 44030602003657号</span>
           </div>
           <p>

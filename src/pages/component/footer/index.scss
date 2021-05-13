@@ -60,14 +60,16 @@
       margin-top: 16px;
       text-align: center;
       & > div {
-        & > span {
+        & > span, & > a{
           font-size: 14px;
           color: #f6f6f6;
+        }
+        & > a {
           margin-right: 48px;
+          cursor: pointer;
+          text-decoration: none;
         }
-        & > span:last-of-type {
-          margin-right: 0;
-        }
+        
       }
       & > p {
         font-size: 16px;
